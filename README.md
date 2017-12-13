@@ -1,0 +1,2 @@
+# purple-mnt
+monitor logctn
