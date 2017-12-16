@@ -2,14 +2,12 @@ package purple.mnt;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.quartz.*;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
-import java.util.concurrent.TimeUnit;
 
 import org.quartz.impl.StdSchedulerFactory;
 
-import purple.mnt.service.HelloJob;
+import purple.mnt.service.ActionJob;
 
 
 
@@ -31,7 +29,7 @@ public class MntApplication {
 		System.out.println("scheduler.start");
 
 		//具体任务.
-		JobDetail jobDetail = JobBuilder.newJob(HelloJob.class).withIdentity("job1","group1").build();
+		JobDetail jobDetail = JobBuilder.newJob(ActionJob.class).withIdentity("job1","group1").build();
 
 		//触发时间点. (每5秒执行1次.)
 		SimpleScheduleBuilder simpleScheduleBuilder = SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(5).repeatForever();
@@ -43,7 +41,7 @@ public class MntApplication {
 
 		Trigger trigger = TriggerBuilder.newTrigger().withIdentity("trigger1","group1")
 				.startNow()
-				.withSchedule(SimpleScheduleBuilder.repeatSecondlyForever(30)) //每几秒钟执行一次
+				.withSchedule(SimpleScheduleBuilder.repeatSecondlyForever(5)) //每几秒钟执行一次
 				//.withSchedule(CronScheduleBuilder.dailyAtHourAndMinute(14,40)) //每天某个时间点执行
 				.build();
 
