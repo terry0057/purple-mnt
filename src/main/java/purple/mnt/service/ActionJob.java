@@ -30,7 +30,7 @@ public class ActionJob implements Job {
         String msg="";
 
         try {
-            List<MssHealth> mssHealthList = mssHealthMapper.getAll222();
+            //List<MssHealth> mssHealthList = mssHealthMapper.getAll222();
 
 
             URL url = new URL(urlstr);

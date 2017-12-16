@@ -49,7 +49,7 @@ public class MntApplication {
 
 		Trigger trigger = TriggerBuilder.newTrigger().withIdentity("trigger1","group1")
 				.startNow()
-				//.withSchedule(SimpleScheduleBuilder.repeatSecondlyForever(5)) //每几秒钟执行一次
+				.withSchedule(SimpleScheduleBuilder.repeatSecondlyForever(5)) //每几秒钟执行一次
 				//.withSchedule(CronScheduleBuilder.dailyAtHourAndMinute(14,40)) //每天某个时间点执行
 				.build();
 
