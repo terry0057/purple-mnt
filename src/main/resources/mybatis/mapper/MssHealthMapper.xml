@@ -5,7 +5,7 @@
 <mapper namespace="purple.mnt.mapper.MssHealthMapper" >
 
     <resultMap type="purple.mnt.model.MssHealth" id="BaseResultMap">
-        <id property="id" column="id" jdbcType="VARCHAR" />
+        <result property="id" column="id" jdbcType="VARCHAR" />
         <result property="status" column="status" jdbcType="VARCHAR" />
         <result property="creator_id" column="creator_id" jdbcType="VARCHAR" />
         <result property="app_name" column="app_name" jdbcType="VARCHAR" />

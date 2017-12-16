@@ -20,7 +20,8 @@ import java.util.List;
 public class ActionJob implements Job {
 
     @Autowired
-    MssHealthMapper mssHealthMapper;
+    private MssHealthMapper mssHealthMapper;
+
 
     public void execute(JobExecutionContext context) throws JobExecutionException {
         // 执行响应的任务.
@@ -28,11 +29,10 @@ public class ActionJob implements Job {
         String status="";
         String msg="";
 
-
-
-
         try {
             List<MssHealth> mssHealthList = mssHealthMapper.getAll222();
+
+
             URL url = new URL(urlstr);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setConnectTimeout(30000);
