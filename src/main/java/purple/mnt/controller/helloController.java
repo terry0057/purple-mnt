@@ -5,22 +5,23 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import purple.mnt.model.MssHealth;
 import purple.mnt.service.testService;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/hello")
 public class helloController {
 
-    /*@Autowired
-    private testService testService;*/
+    @Autowired
+    private testService testService;
 
     @RequestMapping(value = "/1", method = RequestMethod.GET)
     public String authorize()   {
 
-        //List<MssHealth> list= testService.action();
+        List<MssHealth> list= testService.action();
         return  "123";
         //String serverName = request.getServerName();
     }

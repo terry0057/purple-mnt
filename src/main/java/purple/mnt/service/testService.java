@@ -1,7 +1,5 @@
 package purple.mnt.service;
 
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import purple.mnt.mapper.MssHealthMapper;
@@ -12,12 +10,12 @@ import java.util.List;
 @Service
 public class testService {
 
-  /*  @Autowired
+    @Autowired
     private MssHealthMapper mssHealthMapper;
 
     public List<MssHealth> action()
     {
-            List<MssHealth> mssHealthList = mssHealthMapper.getAll222();
-            return mssHealthList;
-    }*/
+        List<MssHealth> mssHealthList = mssHealthMapper.getAll222();
+        return mssHealthList;
+    }
 }
