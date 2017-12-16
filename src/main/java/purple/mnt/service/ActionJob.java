@@ -8,21 +8,37 @@ import java.util.Date;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
+import org.springframework.beans.factory.annotation.Autowired;
+import purple.mnt.mapper.MssHealthMapper;
+import purple.mnt.model.MssHealth;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.List;
 
 
 public class ActionJob implements Job {
+
+    @Autowired
+    MssHealthMapper mssHealthMapper;
+
     public void execute(JobExecutionContext context) throws JobExecutionException {
         // 执行响应的任务.
         String urlstr="http://eas.nbeport.com/ctnf/rest/sta/get_pass_data";
         String status="";
         String msg="";
+
+
+
+
         try {
+            List<MssHealth> mssHealthList = mssHealthMapper.getAll222();
             URL url = new URL(urlstr);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setConnectTimeout(30000);
+
+            //for (MssHealth mssHealth:mssHealthList) {
+            //}
 
             if(200 == urlConnection.getResponseCode()){
                 //得到输入流

@@ -3,78 +3,81 @@ package purple.mnt.model;
 import java.time.LocalDateTime;
 
 public class MssHealth {
-    public String ID ;
-    public String STATUS ;
-    public LocalDateTime CREATE_TIME ;
-    public String CREATOR_ID ;
-    public LocalDateTime MODIFY_TIME ;
-    public String MODIFIER_ID;
-    public String APP_NAME ;
-    public String REMARK ;
+    public String id ;
+    public String status ;
+    public LocalDateTime create_time ;
+    public String creator_id ;
+    public LocalDateTime modify_time ;
+    public String modifier_id;
+    public String app_name ;
+    public String remark ;
 
-    public String getID() {
-        return ID;
+    public String getId() {
+        return id;
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getSTATUS() {
-        return STATUS;
+    public String getStatus() {
+        return status;
     }
 
-    public void setSTATUS(String STATUS) {
-        this.STATUS = STATUS;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public LocalDateTime getCREATE_TIME() {
-        return CREATE_TIME;
+    public LocalDateTime getCreate_time() {
+        return create_time;
     }
 
-    public void setCREATE_TIME(LocalDateTime CREATE_TIME) {
-        this.CREATE_TIME = CREATE_TIME;
+    public void setCreate_time(LocalDateTime create_time) {
+        this.create_time = create_time;
     }
 
-    public String getCREATOR_ID() {
-        return CREATOR_ID;
+    public String getCreator_id() {
+        return creator_id;
     }
 
-    public void setCREATOR_ID(String CREATOR_ID) {
-        this.CREATOR_ID = CREATOR_ID;
+    public void setCreator_id(String creator_id) {
+        this.creator_id = creator_id;
     }
 
-    public LocalDateTime getMODIFY_TIME() {
-        return MODIFY_TIME;
+    public LocalDateTime getModify_time() {
+        return modify_time;
     }
 
-    public void setMODIFY_TIME(LocalDateTime MODIFY_TIME) {
-        this.MODIFY_TIME = MODIFY_TIME;
+    public void setModify_time(LocalDateTime modify_time) {
+        this.modify_time = modify_time;
     }
 
-    public String getMODIFIER_ID() {
-        return MODIFIER_ID;
+    public String getModifier_id() {
+        return modifier_id;
     }
 
-    public void setMODIFIER_ID(String MODIFIER_ID) {
-        this.MODIFIER_ID = MODIFIER_ID;
+    public void setModifier_id(String modifier_id) {
+        this.modifier_id = modifier_id;
     }
 
-    public String getAPP_NAME() {
-        return APP_NAME;
+    public String getApp_name() {
+        return app_name;
     }
 
-    public void setAPP_NAME(String APP_NAME) {
-        this.APP_NAME = APP_NAME;
+    public void setApp_name(String app_name) {
+        this.app_name = app_name;
     }
 
-    public String getREMARK() {
-        return REMARK;
+    public String getRemark() {
+        return remark;
     }
 
-    public void setREMARK(String REMARK) {
-        this.REMARK = REMARK;
+    public void setRemark(String remark) {
+        this.remark = remark;
     }
+
+
+
 
 
 
