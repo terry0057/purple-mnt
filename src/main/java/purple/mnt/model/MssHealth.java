@@ -8,7 +8,7 @@ public class MssHealth {
     public LocalDateTime CREATE_TIME ;
     public String CREATOR_ID ;
     public LocalDateTime MODIFY_TIME ;
-    public String MODIFIER_ID ;
+    public String MODIFIER_ID;
     public String APP_NAME ;
     public String REMARK ;
 
