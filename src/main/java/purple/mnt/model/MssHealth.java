@@ -3,14 +3,14 @@ package purple.mnt.model;
 import java.time.LocalDateTime;
 
 public class MssHealth {
-    public String id ;
-    public String status ;
-    public LocalDateTime create_time ;
-    public String creator_id ;
-    public LocalDateTime modify_time ;
-    public String modifier_id;
-    public String app_name ;
-    public String remark ;
+    private String id ;
+    private String status ;
+    private LocalDateTime create_time ;
+    private String creator_id ;
+    private LocalDateTime modify_time ;
+    private String modifier_id;
+    private String app_name ;
+    private String remark ;
 
     public String getId() {
         return id;

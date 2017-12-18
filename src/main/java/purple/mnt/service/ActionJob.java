@@ -29,10 +29,14 @@ public class ActionJob {
         String urlstr="http://eas.nbeport.com/ctnf/rest/sta/get_pass_data";
         String status="";
         String msg="";
-        List<MssHealth> mssHealthList = mssHealthMapper.getAll222();
-        for (MssHealth mssHealth:mssHealthList) {
+        List<MssHealth> mssHealthList = mssHealthMapper.getAll();
+        System.out.println("status :" + mssHealthList.get(0).getApp_name() + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+
+        /*for (MssHealth mssHealth:mssHealthList) {
             System.out.println("status :" + mssHealth.app_name + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
-        }
+        }*/
+
+
         /*try {
 
 

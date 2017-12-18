@@ -31,7 +31,7 @@ public class Job2 {
     //@Scheduled(fixedRate = 10000)
     public void timerToZZP(){
 
-        List<MssHealth> mssHealthList = mssHealthMapper.getAll222();
+        List<MssHealth> mssHealthList = mssHealthMapper.getAll();
         System.out.println("每10秒:" +mssHealthList.size() + ","+ new Random().nextLong() + new SimpleDateFormat("HH:mm:ss").format(new Date()));
 
     }

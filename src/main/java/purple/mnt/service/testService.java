@@ -15,7 +15,7 @@ public class testService {
 
     public List<MssHealth> action()
     {
-        List<MssHealth> mssHealthList = mssHealthMapper.getAll222();
+        List<MssHealth> mssHealthList = mssHealthMapper.getAll();
         return mssHealthList;
     }
 }

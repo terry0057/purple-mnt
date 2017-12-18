@@ -21,13 +21,29 @@
         id, status, create_time, creator_id, modify_time, modifier_id, app_name, remark
     </sql>
 
-    <select id="getAll222" resultMap="BaseResultMap">
+    <select id="getAll" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List" />
         from
         <include refid="Tabel_Name" />
-
     </select>
+
+
+    <select id="getSingle" parameterType="java.lang.String" resultMap="BaseResultMap" >
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM
+        <include refid="Tabel_Name" />
+        WHERE id = #{id}
+    </select>
+
+    <insert id="insert" parameterType="purple.mnt.model.MssHealth" >
+        INSERT INTO
+        <include refid="Tabel_Name" />
+        (id,name,age,address)
+        VALUES
+        (#{id},#{name}, #{age}, #{address})
+    </insert>
 
 
 

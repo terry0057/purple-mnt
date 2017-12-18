@@ -10,19 +10,22 @@ import purple.mnt.model.MssHealth;
 import purple.mnt.service.testService;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping("/hello")
-public class helloController {
+public class helloController  {
 
     @Autowired
     private testService testService;
 
     @RequestMapping(value = "/1", method = RequestMethod.GET)
-    public String authorize()   {
+    public String authorize()  throws InterruptedException {
 
         List<MssHealth> list= testService.action();
-        return  "123";
+        TimeUnit.SECONDS.sleep(10);
+        //Thread.sleep(10);
+        return   list.get(0).getApp_name();
         //String serverName = request.getServerName();
     }
 
