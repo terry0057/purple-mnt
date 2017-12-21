@@ -8,4 +8,9 @@ import java.util.List;
 @Repository
 public interface MssAppMonitorMapper {
     List<MssAppMonitor> getAll();
+
+    void UpdateModfiyTimeById(MssAppMonitor mssAppMonitor);
+
 }
+
+

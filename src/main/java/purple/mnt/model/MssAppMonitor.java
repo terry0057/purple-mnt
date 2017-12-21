@@ -1,6 +1,8 @@
 package purple.mnt.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 public class MssAppMonitor {
     private String id;
@@ -16,8 +18,15 @@ public class MssAppMonitor {
     private String mnt_nul;
     private String mnt_status;
     private String mnt_mobile;
-    private Double time;
+    private Integer fixed_rate;
 
+    public Integer getFixed_rate() {
+        return fixed_rate;
+    }
+
+    public void setFixed_rate(Integer fixed_rate) {
+        this.fixed_rate = fixed_rate;
+    }
     public String getId() {
         return id;
     }
@@ -122,13 +131,6 @@ public class MssAppMonitor {
         this.mnt_mobile = mnt_mobile;
     }
 
-    public Double getTime() {
-        return time;
-    }
-
-    public void setTime(Double time) {
-        this.time = time;
-    }
 
 
 }

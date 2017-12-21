@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import purple.mnt.model.MssAppMonitor;
 import purple.mnt.model.MssHealth;
 import purple.mnt.service.testService;
 
@@ -22,8 +23,8 @@ public class helloController  {
     @RequestMapping(value = "/1", method = RequestMethod.GET)
     public String authorize()  throws InterruptedException {
 
-        List<MssHealth> list= testService.action();
-        TimeUnit.SECONDS.sleep(10);
+        List<MssAppMonitor> list= testService.action2();
+        //TimeUnit.SECONDS.sleep(10);
         //Thread.sleep(10);
         return   list.get(0).getApp_name();
         //String serverName = request.getServerName();

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="purple.mnt.mapper.MssAppMonitorMapper" >
+
+    <resultMap type="purple.mnt.model.MssAppMonitor" id="BaseResultMap">
+        <result property="id" column="id" jdbcType="VARCHAR" />
+        <result property="app_id" column="app_id" jdbcType="VARCHAR" />
+        <result property="creator_id" column="creator_id" jdbcType="VARCHAR" />
+        <result property="modifier_id" column="modifier_id" jdbcType="VARCHAR" />
+        <result property="app_name" column="app_name" jdbcType="VARCHAR" />
+        <result property="status" column="status" jdbcType="VARCHAR" />
+        <result property="remark" column="remark" jdbcType="VARCHAR" />
+        <result property="mnt_name" column="mnt_name" jdbcType="VARCHAR" />
+        <result property="mnt_nul" column="mnt_nul" jdbcType="VARCHAR" />
+        <result property="mnt_status" column="mnt_status" jdbcType="VARCHAR" />
+        <result property="mnt_mobile" column="mnt_mobile" jdbcType="VARCHAR" />
+        <result property="fixed_rate" column="fixed_rate" jdbcType="DOUBLE" />
+        <result property="create_time" column="create_time" jdbcType="DATE"/>
+        <result property="modify_time" column="modify_time" jdbcType="DATE"/>
+    </resultMap>
+    <sql id="Tabel_Name">
+        MSS_APP_MONITOR
+    </sql>
+
+    <sql id="Base_Column_List" >
+        id, app_id, create_time, creator_id, modify_time, modifier_id, app_name, status, remark, mnt_name, mnt_nul, mnt_status, mnt_mobile, fixed_rate
+    </sql>
+
+    <select id="getAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from
+        <include refid="Tabel_Name" />
+    </select>
+
+
+    <select id="getSingle" parameterType="java.lang.String" resultMap="BaseResultMap" >
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM
+        <include refid="Tabel_Name" />
+        WHERE id = #{id}
+    </select>
+
+    <select id="UpdateModfiyTimeById" parameterType="purple.mnt.model.MssAppMonitor" resultMap="BaseResultMap" >
+        update
+        <include refid="Tabel_Name" />
+        SET
+        modify_time = #{modify_time,jdbcType=TIMESTAMP},
+        status= #{status,jdbcType=VARCHAR},
+        remark=#{remark,jdbcType=VARCHAR}
+        WHERE id =  #{id,jdbcType=VARCHAR}
+    </select>
+
+
+
+
+
+</mapper>
